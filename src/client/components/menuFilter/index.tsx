@@ -29,7 +29,12 @@ function MenuFilter() {
 
   return (
     <div className="filters">
-      <input onChange={onChange} className="form-control" placeholder="Name" />
+      <input
+        data-test-id="filter-input"
+        onChange={onChange}
+        className="form-control"
+        placeholder="Name"
+      />
     </div>
   );
 }

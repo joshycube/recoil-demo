@@ -12,7 +12,9 @@ function Summary() {
   return (
     <>
       <div className="col-6 menu-summary-left">
-        {!!sumOfSelection && <span>{sumOfSelection}</span>}
+        {!!sumOfSelection && (
+          <span data-test-id="cart-counter">{sumOfSelection}</span>
+        )}
       </div>
       <div className="col-6 menu-summary-right">
         {Object.keys(dietSelection).map((item: string) => (

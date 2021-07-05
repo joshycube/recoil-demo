@@ -18,7 +18,7 @@ function CartItem({ cartItem }: Props) {
   };
 
   return (
-    <li className="item">
+    <li data-test-id="cart-item" className="item">
       <h2>{cartItem.name}</h2>
       <p>
         {cartItem.dietaries.map((dietary: string) => (
@@ -28,7 +28,7 @@ function CartItem({ cartItem }: Props) {
         ))}
       </p>
       <button
-        data-testid="removeItem"
+        data-test-id="btn-remove-item"
         onClick={() => removeItem(cartItem.id)}
         className="remove-item"
       >

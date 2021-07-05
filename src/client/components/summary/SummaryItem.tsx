@@ -7,8 +7,11 @@ interface Props {
 
 function SummaryItem({ dietType, count }: Props) {
   return count > 0 ? (
-    <span>
-      {count}x<span className="dietary">{dietType}</span>
+    <span data-test-id="dietary-summary">
+      {count}x
+      <span className="dietary" data-test-id="dietary-type">
+        {dietType}
+      </span>
     </span>
   ) : null;
 }

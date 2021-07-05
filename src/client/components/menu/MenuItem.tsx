@@ -20,7 +20,7 @@ function MenuItem({ menuItem }: Props) {
     !!cartItems.filter((cartItem: IMenuItem) => cartItem.id === id).length;
 
   return (
-    <li className="item">
+    <li data-test-id="menu-item" className="item">
       <h2>{menuItem.name}</h2>
       <p>
         {menuItem.dietaries.map((dietary: string) => (
@@ -31,7 +31,7 @@ function MenuItem({ menuItem }: Props) {
       </p>
       <button
         disabled={isAdded(menuItem.id)}
-        data-testid="addItem"
+        data-test-id="btn-add-item"
         onClick={() => addItem(menuItem)}
         className="add-item"
       >
